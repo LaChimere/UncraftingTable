@@ -1,6 +1,7 @@
 package org.jglrxavpok.mods.decraft.client.gui.inventory;
 
 import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.AbstractGui;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.renderer.RenderHelper;
@@ -213,7 +214,7 @@ public class GuiUncraftingTable extends ContainerScreen<ContainerUncraftingTable
 		}
 
 
-		RenderHelper.enableGUIStandardItemLighting();
+		RenderHelper.enableStandardItemLighting();
 
 		// render a book over the left slot
 		int slotX = 20; int slotY = 35;

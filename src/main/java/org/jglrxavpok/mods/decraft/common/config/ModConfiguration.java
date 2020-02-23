@@ -1,21 +1,5 @@
 package org.jglrxavpok.mods.decraft.common.config;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.network.PacketDistributor;
-import org.jglrxavpok.mods.decraft.ModUncrafting;
-import org.jglrxavpok.mods.decraft.common.network.message.ConfigSyncMessage;
-import net.minecraft.client.Minecraft;
-import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-
 public class ModConfiguration
 {
 	// FIXME

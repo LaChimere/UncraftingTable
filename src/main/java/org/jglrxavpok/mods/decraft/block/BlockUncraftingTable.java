@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
@@ -42,14 +43,14 @@ public class BlockUncraftingTable extends Block
 	}
 
 	@Override
-	public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
 	{
 		if (!world.isRemote)
 		{
 			NetworkHooks.openGui((ServerPlayerEntity)player, CONTAINER_SUPPLIER, pos);
 			checkForPorteManteau(player, world, pos);
 		}
-		return true;
+		return ActionResultType.SUCCESS;
 	}
 
 	private void checkForPorteManteau(PlayerEntity player, World world, BlockPos pos)
